@@ -1,5 +1,39 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {}
+    "点击存储": {
+        "recognition": "OCR",
+        "expected": "存储",
+        "action": "Click",
+        "next": [
+            "A"
+        ]
+    },
+    "A": {
+        "pre_wait_freezes": 1500,
+        "next": [
+            "向下滑动"
+        ]
+    },
+    "向下滑动": {
+        "action": "Swipe",
+        "begin": [
+            100,
+            700,
+            10,
+            10
+        ],
+        "end": [
+            100,
+            100,
+            10,
+            10
+        ],
+        "next": [
+            "点击回收站"
+        ]
+    },
+    "点击回收站": {
+        "recognition": "TemplateMatch",
+        "template": "回收站.png",
+        "action": "Click"
+    }
 }
